@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Smart Task Manager - A responsive task management application built using HTML, CSS and JavaScript.">
+
+    <title>Smart Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">✓</span>
+            <span>TaskFlow</span>
+        </div>
+
+        <button id="themeToggle" class="theme-btn">
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <div>
+                <p class="eyebrow">PRODUCTIVITY DASHBOARD</p>
+
+                <h1>
+                    Organize your day.<br>
+                    <span>Get things done.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Manage your tasks, priorities and deadlines
+                    from one simple dashboard.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+
+                <div>
+                    <p>Total Tasks</p>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+
+                <div>
+                    <p>Pending</p>
+                    <h2 id="pendingTasks">0</h2>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">✓</div>
+
+                <div>
+                    <p>Completed</p>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+
+                <div>
+                    <p>High Priority</p>
+                    <h2 id="highPriorityTasks">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADD TASK ================= -->
+
+        <section class="task-panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">TASK MANAGEMENT</p>
+                    <h2>Add a New Task</h2>
+                </div>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <div class="form-grid">
+
+                    <div class="input-group full">
+                        <label for="taskInput">Task</label>
+
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="What needs to be done?"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="category">Category</label>
+
+                        <select id="category">
+
+                            <option value="Work">
+                                Work
+                            </option>
+
+                            <option value="Study">
+                                Study
+                            </option>
+
+                            <option value="Personal">
+                                Personal
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select id="priority">
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="dueDate">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dueDate"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <button type="submit" class="add-btn">
+                    + Add Task
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= TASK LIST ================= -->
+
+        <section class="task-panel">
+
+            <div class="task-header">
+
+                <div>
+                    <p class="eyebrow">YOUR WORKSPACE</p>
+
+                    <h2>My Tasks</h2>
+                </div>
+
+
+                <div class="task-controls">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔍 Search tasks..."
+                    >
+
+
+                    <select id="filterSelect">
+
+                        <option value="all">
+                            All Tasks
+                        </option>
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                        <option value="high">
+                            High Priority
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Task list -->
+
+            <div id="taskList" class="task-list">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        ✓
+                    </div>
+
+                    <h3>No tasks yet</h3>
+
+                    <p>
+                        Add your first task to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Smart Task Manager
+        </p>
+
+        <p>
+            Built with HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
